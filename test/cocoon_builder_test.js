@@ -45,4 +45,12 @@ exports.cocoon_builder = {
 
     test.done();
   },
+
+  upload: function(test)
+  {
+      //test.expect(1);
+
+
+      test.done();
+  }
 };

@@ -1,3 +1,8 @@
+var CocoonSDK = require('cocoon-cloud/cocoon.sdk.js');
+
+var client = new CocoonSDK.APIClient({clientId:"MY_CLIENT_ID"});
+
+
 /*
  * grunt-cocoon-builder
  * https://github.com/CatLabInteractive/grunt-cocoon-builder

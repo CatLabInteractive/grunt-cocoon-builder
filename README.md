@@ -26,10 +26,15 @@ In your project's Gruntfile, add a section named `cocoon_builder` to the data ob
 grunt.initConfig({
   cocoon_builder: {
     options: {
-      // Task-specific options go here.
+      'clientId' : 'abc123', // You need to request this from Ludei support.
+      'clientSecret' : 'abc123',
+      'username' : 'abcdef',
+      'password' : 'abcdef',
+      
     },
     your_target: {
-      // Target-specific file lists and/or options go here.
+      'src' : 'src/**/*',
+      'dest' : 'release'
     },
   },
 });

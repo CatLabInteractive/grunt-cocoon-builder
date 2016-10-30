@@ -1,3 +1,8 @@
+var credentials = require('./test/credentials.json');
+if (credentials) {
+  console.error('You need to specify a test/credentials.json');
+}
+
 /*
  * grunt-cocoon-builder
  * https://github.com/CatLabInteractive/grunt-cocoon-builder
@@ -30,20 +35,15 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     cocoon_builder: {
-      default_options: {
+      example: {
         options: {
+          "clientId": credentials.clientId,
+          "clientSecret": credentials.clientSecret,
+          "username": credentials.username,
+          "password": credentials.password
         },
         files: {
           'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
         }
       }
     },
